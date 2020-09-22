@@ -1,17 +1,18 @@
 import java.util.*;
 class Employee{
 	
- 	static int empno = 1;
-	static float total_salary;
-	float sal ;
-	static int count;
+	static int count=0;
+	static int sum =0;
+	int empno;
+	float total_salary;
 	Employee(float sal){
-		this.empno = empno++;
+		this.empno = count++;
 		this.sal = sal;
-		total_salary += sal;
-		count++;
+		sum += sal;
+		
 	}	
 	void display(){
+		total_salary = sum;
 		System.out.println("No of employees are : "+count+" Total salaries of those employees is : "+total_salary);
 	}
 }
